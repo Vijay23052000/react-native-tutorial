@@ -1,22 +1,24 @@
-import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import LoginScreen from './component/LoginScreen';
-import DashboardScreen from './component/DashboardScreen';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 
+import WelcomeScreen from './screens/WelcomeScreen';
+import UserScreen from './screens/UserScreen';
+import DetailsScreen from './components/DetailsScreen';
+import HomeScreen from './components/HomeScreen';
+import React from 'react';
 
+const Drawer = createDrawerNavigator();
 
-const Stack = createNativeStackNavigator();
-
-function App() {
+export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Login" component={LoginScreen} />
-        <Stack.Screen name="Dashboard" component={DashboardScreen} />
-      </Stack.Navigator>
+      <Drawer.Navigator>
+        <Drawer.Screen name="Welcome" component={WelcomeScreen} />
+        <Drawer.Screen name="User" component={UserScreen} />
+        <Drawer.Screen name="Details" component={DetailsScreen} />
+        <Drawer.Screen name="Home" component={HomeScreen} />
+
+      </Drawer.Navigator>
     </NavigationContainer>
   );
 }
-
-export default App;

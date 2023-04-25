@@ -1,16 +1,16 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, Button, StyleSheet } from 'react-native';
 
-function ContactScreen() {
+function UserScreen() {
   return (
     <View style={styles.rootContainer}>
       <Text>
-        This is the <Text style={styles.highlight}>"Contact Deatils"</Text> screen!
+        This is the <Text style={styles.highlight}>"User"</Text> screen!
       </Text>
     </View>
   );
 }
 
-export default ContactScreen;
+export default UserScreen;
 
 const styles = StyleSheet.create({
   rootContainer: {

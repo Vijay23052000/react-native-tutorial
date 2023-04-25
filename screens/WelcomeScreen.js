@@ -1,18 +1,16 @@
-import { View, Text, StyleSheet, Button } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
-
-function LogoutScreen({ navigation }) {
+function WelcomeScreen() {
   return (
     <View style={styles.rootContainer}>
       <Text>
-        This is the <Text style={styles.highlight}>"Logout"</Text> screen!
+        This is the <Text style={styles.highlight}>"Welcome"</Text> screen!
       </Text>
-       <Button title="Logout" onPress={ ()=>  navigation.navigate('Login')} />
     </View>
   );
 }
 
-export default LogoutScreen;
+export default WelcomeScreen;
 
 const styles = StyleSheet.create({
   rootContainer: {
