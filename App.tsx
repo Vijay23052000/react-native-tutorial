@@ -1,33 +1,24 @@
-import * as React from 'react';
-import { Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 
-function HomeScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Home!</Text>
-    </View>
-  );
-}
+import WelcomeScreen from './screens/WelcomeScreen';
+import UserScreen from './screens/UserScreen';
+import DetailsScreen from './components/DetailsScreen';
+import HomeScreen from './components/HomeScreen';
+import React from 'react';
 
-function SettingsScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Settings!</Text>
-    </View>
-  );
-}
-
-const Tab = createMaterialBottomTabNavigator();
+const Drawer = createDrawerNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Settings" component={SettingsScreen} />
-      </Tab.Navigator>
+      <Drawer.Navigator>
+        <Drawer.Screen name="Welcome" component={WelcomeScreen} />
+        <Drawer.Screen name="User" component={UserScreen} />
+        <Drawer.Screen name="Details" component={DetailsScreen} />
+        <Drawer.Screen name="Home" component={HomeScreen} />
+
+      </Drawer.Navigator>
     </NavigationContainer>
   );
 }
