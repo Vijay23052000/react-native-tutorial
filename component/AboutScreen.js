@@ -1,12 +1,14 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Button } from 'react-native';
 
 
-function AboutScreen() {
+function AboutScreen({ navigation }) {
+  // const {name} = route.params;
   return (
     <View style={styles.rootContainer}>
-      <Text>
-        This is the <Text style={styles.highlight}>"About Screen"</Text> screen!
+      <Text style={styles.text}>
+        This is the <Text style={styles.highlight}>"About"</Text> screen!
       </Text>
+      <Button title="Go to Contact" onPress={ ()=>  navigation.navigate('Contact')} />
     </View>
   );
 }
@@ -21,6 +23,10 @@ const styles = StyleSheet.create({
   },
   highlight: {
     fontWeight: 'bold',
-    color: '#eb1064',
+    color: 'black',
   },
+  text: {
+    fontSize: 18,
+    color: 'black',
+  }
 });

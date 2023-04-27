@@ -15,8 +15,8 @@ function LoginScreen({ navigation }) {
 
   const handleLogin = () => {
     // Perform login action here
-    if (username === 'vijay' && password === '1234') {
-      navigation.navigate('Dashboard');
+    if (username === 'Vijay' && password === '1234') {
+      navigation.navigate('Dashboard', {username});
     } else {
       setErrorMessage('Wrong username or password');
     }
@@ -55,11 +55,13 @@ const styles = StyleSheet.create({
     },
     input: {
       borderWidth: 1,
-      borderColor: '#ccc',
-      padding: 10,
-      margin: 10,
-      width: '80%',
-      borderRadius: 5,
+      borderColor: '#000',
+      padding: 11,
+      backgroundColor: 'white',
+      margin: 8,
+      width: '75%',
+      borderRadius: 10,
+      marginTop: 5,
     },
     button: {
       backgroundColor: '#007bff',
@@ -74,5 +76,6 @@ const styles = StyleSheet.create({
     errorMessage: {
       color: 'red',
       marginVertical: 10,
+      fontSize: 18,
     },
   });

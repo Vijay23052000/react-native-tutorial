@@ -4,10 +4,11 @@ import { View, Text, StyleSheet, Button } from 'react-native';
 function LogoutScreen({ navigation }) {
   return (
     <View style={styles.rootContainer}>
-      <Text>
+      <Text style={styles.text}>
         This is the <Text style={styles.highlight}>"Logout"</Text> screen!
       </Text>
        <Button title="Logout" onPress={ ()=>  navigation.navigate('Login')} />
+       
     </View>
   );
 }
@@ -22,6 +23,11 @@ const styles = StyleSheet.create({
   },
   highlight: {
     fontWeight: 'bold',
-    color: '#eb1064',
+    color: 'black',
+
   },
+  text: {
+    fontSize: 18,
+    color: 'black',
+  }
 });

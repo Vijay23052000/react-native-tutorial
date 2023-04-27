@@ -10,9 +10,18 @@ import LogoutScreen from './LogoutScreen';
 const Drawer = createDrawerNavigator();
 
 
-function DashboardScreen() {
+function DashboardScreen({route}) {
+  const {username} = route.params;
   return (
-    <Drawer.Navigator>
+    <Drawer.Navigator screenOptions={{
+      headerStyle:{
+        backgroundColor: 'pink',
+      },
+      headerTintColor: 'green',
+      headerTitleStyle: {
+        fontSize: 25,
+      },
+    }}>
       <Drawer.Screen name="About" component={AboutScreen} />
       <Drawer.Screen name="Contact" component={ContactScreen} />
       <Drawer.Screen name="Logout" component={LogoutScreen} />
