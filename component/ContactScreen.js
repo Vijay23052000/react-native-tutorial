@@ -6,7 +6,7 @@ function ContactScreen({ navigation }) {
       <Text style={styles.text}>
         This is the <Text style={styles.highlight}>"Contact"</Text> screen!
       </Text>
-      <Button title="Go to About" onPress={ ()=>  navigation.navigate('About')} />
+      <Button title="Go to Welcome" onPress={ ()=>  navigation.navigate('Welcome')} />
     </View>
   );
 }

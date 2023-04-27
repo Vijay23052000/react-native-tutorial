@@ -5,6 +5,7 @@ import LoginScreen from './component/LoginScreen';
 import DashboardScreen from './component/DashboardScreen';
 import SplashScreen from 'react-native-splash-screen';
 import {useEffect} from 'react';
+import SignUpScreen from './component/SignUpScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -14,17 +15,9 @@ function App() {
   }, []);
   return (
     <NavigationContainer>
-      <Stack.Navigator
-        screenOptions={{
-          headerStyle:{
-            backgroundColor: 'gold',
-          },
-          headerTintColor: 'black',
-          headerTitleStyle: {
-            fontSize: 25,
-          },
-        }}>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="Sign Up" component={SignUpScreen} />
         <Stack.Screen name="Dashboard" component={DashboardScreen} />
       </Stack.Navigator>
     </NavigationContainer>

@@ -1,18 +1,18 @@
 import { View, Text, StyleSheet, Button } from 'react-native';
 
 
-function AboutScreen({ navigation }) {
+function WelcomeScreen({ navigation }) {
   return (
     <View style={styles.rootContainer}>
       <Text style={styles.text}>
-        This is the <Text style={styles.highlight}>"About"</Text> screen!
+        This is the <Text style={styles.highlight}>"Welcome"</Text> screen!
       </Text>
-      <Button title="Go to Contact" onPress={ ()=>  navigation.navigate('Contact')} />
+      <Button title="Go to About" onPress={ ()=>  navigation.navigate('About')} />
     </View>
   );
 }
 
-export default AboutScreen;
+export default WelcomeScreen;
 
 const styles = StyleSheet.create({
   rootContainer: {

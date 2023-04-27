@@ -14,9 +14,8 @@ function LoginScreen({ navigation }) {
   const [errorMessage, setErrorMessage] = useState('');
 
   const handleLogin = () => {
-    // Perform login action here
     if (username === 'Vijay' && password === '1234') {
-      navigation.navigate('Dashboard', {username});
+      navigation.navigate('Dashboard');
     } else {
       setErrorMessage('Wrong username or password');
     }
@@ -37,9 +36,9 @@ function LoginScreen({ navigation }) {
         value={password}
         secureTextEntry
       />
-      <Button title='Login' style={styles.button} onPress={handleLogin}>
-        <Text style={styles.buttonText}>Login</Text>
-      </Button>
+      <Button title='Login' style={styles.button} onPress={handleLogin}/>
+      <Text>New User? Sign Up</Text>
+      <Button title="Sign Up" style={styles.button} onPress={ ()=>  navigation.navigate('Sign Up')} />
       {errorMessage ? <Text style={styles.errorMessage}>{errorMessage}</Text> : null}
     </View>
   );
@@ -66,7 +65,7 @@ const styles = StyleSheet.create({
     button: {
       backgroundColor: '#007bff',
       padding: 10,
-      borderRadius: 5,
+      borderRadius: 10,
     },
     buttonText: {
       color: '#fff',

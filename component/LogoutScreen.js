@@ -1,14 +1,12 @@
-import { View, Text, StyleSheet, Button } from 'react-native';
+import {View, Text, StyleSheet, Button} from 'react-native';
 
-
-function LogoutScreen({ navigation }) {
+function LogoutScreen({navigation}) {
   return (
     <View style={styles.rootContainer}>
       <Text style={styles.text}>
         This is the <Text style={styles.highlight}>"Logout"</Text> screen!
       </Text>
-       <Button title="Logout" onPress={ ()=>  navigation.navigate('Login')} />
-       
+      <Button title="Logout" onPress={() => navigation.navigate('Login')} />
     </View>
   );
 }
@@ -24,10 +22,9 @@ const styles = StyleSheet.create({
   highlight: {
     fontWeight: 'bold',
     color: 'black',
-
   },
   text: {
     fontSize: 18,
     color: 'black',
-  }
+  },
 });

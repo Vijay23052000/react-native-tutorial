@@ -6,12 +6,12 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import ContactScreen from './ContactScreen';
 import AboutScreen from './AboutScreen';
 import LogoutScreen from './LogoutScreen';
+import WelcomeScreen from './WelcomeScreen';
 
 const Drawer = createDrawerNavigator();
 
 
-function DashboardScreen({route}) {
-  const {username} = route.params;
+function DashboardScreen() {
   return (
     <Drawer.Navigator screenOptions={{
       headerStyle:{
@@ -22,6 +22,7 @@ function DashboardScreen({route}) {
         fontSize: 25,
       },
     }}>
+      <Drawer.Screen name="Welcome" component={WelcomeScreen} />
       <Drawer.Screen name="About" component={AboutScreen} />
       <Drawer.Screen name="Contact" component={ContactScreen} />
       <Drawer.Screen name="Logout" component={LogoutScreen} />
